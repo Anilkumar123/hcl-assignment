@@ -1,2 +1,0 @@
-# hcl-assignment
-Assignment
