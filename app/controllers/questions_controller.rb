@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
 
-	before_action :set_question, except: [:create, :new,]
+	before_action :set_question, except: [:index, :new]
 
   def index
     @questions = Question.all
