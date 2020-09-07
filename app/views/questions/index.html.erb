@@ -1,0 +1,35 @@
+<div class="container py-5">
+  <% if @questions.present? %>
+    	<table>
+    		<th>Sl.No</th>
+    		<th>Name</th>
+    		<th>Teaming Stages</th>
+    		<th>Appears</th>
+    		<th>Frequency</th>
+    		<th>Type</th>
+    		<th>Role</th>
+    		<th>Required?</th>
+    		<th>Conditions</th>
+    		<th>Mapping</th>
+    		<% @questions.each do |question| %>
+
+    		<tr>
+    			<td><%= question.id %></td>
+    			<td><%= question.name %></td>
+    			<td><%= question.teaming_stages %></td>
+    			<td><%= question.appears %></td>
+    			<td><%= question.frequency %></td>
+    			<td><%= question.question_type %></td>
+    			<td><%= question.role.name %></td>
+    			<td><%= question.required %></td>
+    			<td><%= question.conditions %></td>
+    			<td><%= question.mapping.name %></td>
+    		</tr>
+          
+        <%#= link_to "Delete", company_path(company.id), method: :delete, data: {confirm: "Are you sure?"}  %>
+      <% end %>
+    		
+    	</table>
+      
+  <% end %>
+</div>
